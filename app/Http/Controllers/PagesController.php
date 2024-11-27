@@ -8,6 +8,7 @@ class PagesController extends Controller
 {
     public function appoinment()
     {
+        //test
         return view('pages/appoinment');
     }
 
