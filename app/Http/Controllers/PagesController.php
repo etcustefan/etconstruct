@@ -14,6 +14,7 @@ class PagesController extends Controller
 
     public function project()
     {
+        //test2
         return view('pages/project');
     }
 
