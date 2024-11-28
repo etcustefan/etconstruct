@@ -36,7 +36,8 @@ COPY docker/prod/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Copy your Laravel application into the container
-COPY ../../ /var/www/html
+# COPY ../../ /var/www/html
+COPY . /var/www/hml
 
 # Copy your Apache virtual host configuration
 COPY docker/prod/vhost.conf /etc/apache2/sites-available/000-default.conf
