@@ -12,15 +12,31 @@ RUN apt-get update && apt-get install -y \
         jpegoptim \
         optipng \
         pngquant \
-        gifsicle \
-    && docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg \
-    && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
-    && docker-php-ext-install pdo pdo_pgsql pgsql intl gd pdo_mysql mysqli zip \
-    && docker-php-ext-configure exif \
-    && docker-php-ext-install exif \
-    && pecl install apcu \
-    && docker-php-ext-enable apcu \
-    && a2enmod rewrite
+        gifsicle
+
+RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg
+
+RUN docker-php-ext-configure pgsql --with-pgsql=/usr/local/pgsql
+
+RUN docker-php-ext-install \
+        pdo \
+        pdo_pgsql \
+        pgsql \
+        intl \
+        gd \
+        pdo_mysql \
+        mysqli \
+        zip
+
+RUN docker-php-ext-configure exif
+
+RUN docker-php-ext-install exif
+
+RUN pecl install apcu
+
+RUN docker-php-ext-enable apcu
+
+RUN a2enmod rewrite
 
 # Install Supervisor
 RUN apt-get install -y supervisor
