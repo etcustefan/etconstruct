@@ -59,7 +59,7 @@
             tmPk.gsapAnimationImageScale2();
             tmPk.menuCurrentLink();
         },
-        
+
         swiperJs: function () {
             $(document).ready(function(){
                 var swiper = new Swiper(".mySwiper-banner-one", {
@@ -228,13 +228,13 @@
               var swiper = new Swiper(".mySwiper-portfolio-2-cons", {
                 slidesPerView: 4,
                 spaceBetween: 30,
-                loop: true,
+                loop: false,
                 centeredSlides: true,
                 speed: 2000,
-                autoplay: {
-                  delay: 3000,
-                  disableOnInteraction: false,
-                },
+                // autoplay: {
+                //   delay: 3000,
+                //   disableOnInteraction: false,
+                // },
                 // loopFillGroupWithBlank: true,
                 pagination: {
                   el: ".swiper-pagination",
@@ -333,10 +333,10 @@
                 },
               });
             });
-               
+
         },
-        
-        // prograss bar Start 
+
+        // prograss bar Start
         progressAvtivation: function(){
             $(window).scroll(function () {
               if ($(this).scrollTop() > 250) {
@@ -358,7 +358,7 @@
             new WOW().init();
         },
 
-        // prograss bar End 
+        // prograss bar End
         counterUp: function (e) {
           $('.counter').counterUp({
               delay: 10,
@@ -371,14 +371,14 @@
         backToTopInit: function () {
           $(document).ready(function(){
           "use strict";
-      
+
           var progressPath = document.querySelector('.progress-wrap path');
           var pathLength = progressPath.getTotalLength();
           progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
           progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
           progressPath.style.strokeDashoffset = pathLength;
           progressPath.getBoundingClientRect();
-          progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';		
+          progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
           var updateProgress = function () {
             var scroll = $(window).scrollTop();
             var height = $(document).height() - $(window).height();
@@ -386,7 +386,7 @@
             progressPath.style.strokeDashoffset = progress;
           }
           updateProgress();
-          $(window).scroll(updateProgress);	
+          $(window).scroll(updateProgress);
           var offset = 50;
           var duration = 550;
           jQuery(window).on('scroll', function() {
@@ -395,16 +395,16 @@
             } else {
               jQuery('.progress-wrap').removeClass('active-progress');
             }
-          });				
+          });
           jQuery('.progress-wrap').on('click', function(event) {
             event.preventDefault();
             jQuery('html, body').animate({scrollTop: 0}, duration);
             return false;
           })
-          
-          
+
+
           });
-  
+
         },
 
         tmpSidecollups:function(){
@@ -427,7 +427,7 @@
             $("#overlay_every-where").removeClass("bgshow");
           });
         },
-        
+
         tmpVedioActivation: function (e) {
 
             $('.play-video').on('click', function (e) {
@@ -452,7 +452,7 @@
             };
 
         },
-        
+
         salActive: function () {
           sal({
               threshold: 0.1,
@@ -479,7 +479,7 @@
             setTimeout(function () {
                 body.removeClass('loaded');
             }, 1500);
-      
+
           });
 
 
@@ -487,7 +487,7 @@
           const tl = gsap.timeline();
           const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
           const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
-      
+
           tl.to(".loader-wrap-heading .load-text , .loader-wrap-heading .cont", {
               delay: 1.5,
               y: -100,
@@ -525,14 +525,14 @@
           //     },
           //     "-=1.5"
           // );
-          
+
 
         },
 
         smoothScroll: function (e) {
           $(document).on('click', '.onepage a[href^="#"]', function (event) {
             event.preventDefault();
-        
+
             $('html, body').animate({
                 scrollTop: $($.attr(this, 'href')).offset().top
             }, 2000);
@@ -543,7 +543,7 @@
           if (device_width > 991) {
             gsap.registerPlugin(ScrollTrigger);
             gsap.registerPlugin(SplitText);
-  
+
             $(document).ready(function () {
               let addAnimation = function () {
                 $(".split-collab").each(function (index) {
@@ -551,9 +551,9 @@
                   const text = new SplitText(textInstance, {
                     type: "chars",
                   });
-  
+
                   let letters = text.chars;
-  
+
                   let tl = gsap.timeline({
                     scrollTrigger: {
                       trigger: textInstance,
@@ -564,7 +564,7 @@
                       }
                     }
                   });
-  
+
                   tl.set(textInstance, { opacity: 1 }).from(letters, {
                     duration: .5,
                     autoAlpha: 0,
@@ -576,15 +576,15 @@
                   });
                 });
               };
-  
+
               addAnimation();
-  
+
               window.addEventListener("resize", function (event) {
                 if ($(window).width() >= 992) {
                   addAnimation();
                 }
               });
-  
+
             });
           }
         },
@@ -788,7 +788,7 @@ Math.easeInOutQuad = function(t, b, c, d) {
 	function initLanguagePicker(picker) {
 		// create the HTML for the custom dropdown element
 		picker.element.insertAdjacentHTML('beforeend', initButtonPicker(picker) + initListPicker(picker));
-		
+
 		// save picker elements
 		picker.dropdown = picker.element.getElementsByClassName('language-picker__dropdown')[0];
 		picker.firstLanguage = picker.dropdown.getElementsByClassName('language-picker__item')[0];
@@ -837,7 +837,7 @@ Math.easeInOutQuad = function(t, b, c, d) {
 	function initButtonPicker(picker) { // create the button element -> picker trigger
 		// check if we need to add custom classes to the button trigger
 		var customClasses = picker.element.getAttribute('data-trigger-class') ? ' '+picker.element.getAttribute('data-trigger-class') : '';
-	
+
 		var button = '<button class="language-picker__button'+customClasses+'" aria-label="'+picker.select.value+' '+picker.element.getElementsByTagName('label')[0].innerText+'" aria-expanded="false" aria-contols="'+picker.pickerId+'-dropdown">';
 		button = button + '<span aria-hidden="true" class="language-picker__label language-picker__flag language-picker__flag--'+picker.select.value+'"><em>'+picker.selectedOption+'</em>';
 		button = button +picker.svgPath+'</span>';
@@ -876,13 +876,13 @@ Math.easeInOutQuad = function(t, b, c, d) {
 		picker.element.getElementsByClassName('language-picker__list')[0].addEventListener('click', function(event){
 			var language = event.target.closest('.language-picker__item');
 			if(!language) return;
-			
+
 			if(language.hasAttribute('aria-selected') && language.getAttribute('aria-selected') == 'true') {
 				// selecting the same language
 				event.preventDefault();
 				picker.trigger.setAttribute('aria-expanded', 'false'); // hide dropdown
-			} else { 
-				// ⚠️ Important: this 'else' code needs to be removed in production. 
+			} else {
+				// ⚠️ Important: this 'else' code needs to be removed in production.
 				// The user has to be redirected to the new url -> nothing to do here
 				event.preventDefault();
 				picker.element.getElementsByClassName('language-picker__list')[0].querySelector('[aria-selected="true"]').removeAttribute('aria-selected');
@@ -910,7 +910,7 @@ Math.easeInOutQuad = function(t, b, c, d) {
 					moveFocusToPickerTrigger(element); // if focus is within dropdown, move it to dropdown trigger
 					toggleLanguagePicker(element, 'false'); // close dropdown
 				});
-			} 
+			}
 		});
 		// close language picker when clicking outside it
 		window.addEventListener('click', function(event){
@@ -925,13 +925,13 @@ Math.easeInOutQuad = function(t, b, c, d) {
         mesonaryIsotop: function(){
           $( window ).on( "load", function() {
             var isotope = $(".main-isotop");
-      
+
             if(isotope.length){
                 var iso = new Isotope( '.filter', {
                     itemSelector: '.element-item',
                     layoutMode: 'fitRows'
                   });
-                  
+
                   // filter functions
                   var filterFns = {
                     // show if name ends with -ium
@@ -940,7 +940,7 @@ Math.easeInOutQuad = function(t, b, c, d) {
                       return name.match( /ium$/ );
                     }
                   };
-                  
+
                   // bind filter button click
                   var filtersElem = document.querySelector('.filters-button-group');
                   filtersElem.addEventListener( 'click', function( event ) {
@@ -953,7 +953,7 @@ Math.easeInOutQuad = function(t, b, c, d) {
                     filterValue = filterFns[ filterValue ] || filterValue;
                     iso.arrange({ filter: filterValue });
                   });
-                  
+
                   // change is-checked class on buttons
                   var buttonGroups = document.querySelectorAll('.tmp-button-group');
                   for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
@@ -971,9 +971,9 @@ Math.easeInOutQuad = function(t, b, c, d) {
                     });
                   }
             }
-    
+
             if ($('.grid-masonary').length) {
-    
+
                 // image loaded portfolio init
                 $('.grid-masonary').imagesLoaded(function() {
                     $('.portfolio-filter').on('click', 'button', function() {
@@ -991,7 +991,7 @@ Math.easeInOutQuad = function(t, b, c, d) {
                     });
                 });
             }
-                    
+
             // portfolio Filter
             $('.portfolio-filter button').on('click', function(event) {
                 $(this).siblings('.is-checked').removeClass('is-checked');
@@ -1003,7 +1003,7 @@ Math.easeInOutQuad = function(t, b, c, d) {
 
         gsapAnimationImageScale: function (e) {
           $(document).ready(function () {
-    
+
             let growActive = document.getElementsByClassName('grow');
             if (growActive.length) {
               const growTl = gsap.timeline({
@@ -1020,9 +1020,9 @@ Math.easeInOutQuad = function(t, b, c, d) {
                 scale: 1
               });
             }
-    
+
           });
-    
+
         },
 
         rollingText: function(){
@@ -1031,21 +1031,21 @@ Math.easeInOutQuad = function(t, b, c, d) {
           elements.forEach((element) => {
               let innerText = element.innerText;
               element.innerHTML = "";
-        
+
               let textContainer = document.createElement("div");
               textContainer.classList.add("block");
-        
+
               for (let letter of innerText) {
                   let span = document.createElement("span");
                   span.innerText = letter.trim() === "" ? "\xa0" : letter;
                   span.classList.add("letter");
                   textContainer.appendChild(span);
               }
-        
+
               element.appendChild(textContainer);
               element.appendChild(textContainer.cloneNode(true));
           });
-        
+
           elements.forEach((element) => {
               element.addEventListener("mouseover", () => {
                   element.classList.remove("play");
@@ -1091,13 +1091,13 @@ Math.easeInOutQuad = function(t, b, c, d) {
               }
               })
           }
-    
+
         },
 
 
         gsapAnimationImageScale2: function (e) {
           $(document).ready(function () {
-    
+
             let growActive = document.getElementsByClassName('grow-thumbnail');
             if (growActive.length) {
               const growTmp = gsap.timeline({
@@ -1114,21 +1114,21 @@ Math.easeInOutQuad = function(t, b, c, d) {
                 scale: 1.1
               });
             }
-    
+
           });
-    
+
         },
 
         menuCurrentLink: function() {
           // Get the current URL
           var currentUrl = window.location.href;
-  
+
           // Select the navigation links within the .main-nav container
           document.querySelectorAll('.main-nav a').forEach(function(link) {
               // Check if the link's href matches the current URL
               if (link.href === currentUrl) {
                   link.classList.add('active'); // Add the "active" class
-  
+
                   // Find the closest parent <li> with the "has-dropdown" class
                   var parentLi = link.closest('.has-dropdown');
                   if (parentLi && parentLi.classList.contains('has-dropdown')) {
@@ -1144,4 +1144,3 @@ Math.easeInOutQuad = function(t, b, c, d) {
 
 })(jQuery, window)
 
- 
