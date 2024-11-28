@@ -70,7 +70,7 @@
                                         <rect width="20" height="2" fill="#1F1F25"></rect>
                                     </svg>
                                 </div>
-                                <div class="language-picker">
+                                <div class="language-picker d-none">
                                     <div class="js">
                                         <div class="language-picker js-language-picker" data-trigger-class="btn btn--subtle">
                                             <form action="" class="language-picker__form">
@@ -112,25 +112,25 @@
                 <div class="swiper-slide">
                     <div class="tmp-banner-area bg_image-1 bg_image banner-one-height-control construction-2 tmp-section-gap">
                         <div class="shape-image-banner-one">
-                            <img src="{{ asset('assets/images/banner/shape/01.png') }}"src="{{ asset('assets/images/banner/shape/01.png') }}" alt="banner" class="one">
-                            <img src="{{ asset('assets/images/banner/shape/02.png') }}"src="{{ asset('assets/images/banner/shape/02.png') }}" alt="banner" class="two">
-                            <img src="{{ asset('assets/images/banner/shape/03.png') }}"src="{{ asset('assets/images/banner/shape/03.png') }}" alt="banner" class="three">
+{{--                            <img src="{{ asset('assets/images/banner/shape/01.png') }}"src="{{ asset('assets/images/banner/shape/01.png') }}" alt="banner" class="one">--}}
+{{--                            <img src="{{ asset('assets/images/banner/shape/02.png') }}"src="{{ asset('assets/images/banner/shape/02.png') }}" alt="banner" class="two">--}}
+{{--                            <img src="{{ asset('assets/images/banner/shape/03.png') }}"src="{{ asset('assets/images/banner/shape/03.png') }}" alt="banner" class="three">--}}
                         </div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-12">
                                     <div class="banner-one-main-wrapper">
                                         <div class="inner">
-                                            <span class="sub-title">Business Consulting Agency</span>
-                                            <h1 class="title">Transforming Ideas into Structures</h1>
+{{--                                            <span class="sub-title">Lake View Lux Residence</span>--}}
+                                            <h1 class="title">Apartamentul visurilor tale</h1>
                                             <p class="disc">
-                                                We help small startups grow from idea to millions of users. we can also <br>
-                                            automate your marketing and customer service.
+                                                Complex rezidențial situat pe malul lacului, <br>
+                                                oferind apartamente moderne, finisaje de lux, panoramă spectaculoasă și un stil de viață exclusivist.
                                             </p>
                                             <div class="button-area-banner-one">
-                                                <a href="{{ route('service') }}" class="tmp-btn btn-primary">Get Started Now</a>
+                                                <a href="{{ route('service') }}" class="tmp-btn btn-primary">Solicita o vizionare</a>
                                                 <!-- video icon -->
-                                                <div class="vedio-icone" data-tmp-cursor="lg" data-tmp-cursor-text="Play Video">
+                                                <div class="vedio-icone d-none" data-tmp-cursor="lg" data-tmp-cursor-text="Play Video">
                                                     <a class="video-play-button play-video" href="#">
                                                         <span></span>
                                                         <p class="text">
@@ -155,25 +155,25 @@
                 <div class="swiper-slide">
                     <div class="tmp-banner-area bg_image-2 bg_image banner-one-height-control construction-2 tmp-section-gap">
                         <div class="shape-image-banner-one">
-                            <img src="{{ asset('assets/images/banner/shape/01.png') }}"src="{{ asset('assets/images/banner/shape/01.png') }}" alt="banner" class="one">
-                            <img src="{{ asset('assets/images/banner/shape/02.png') }}"src="{{ asset('assets/images/banner/shape/02.png') }}" alt="banner" class="two">
-                            <img src="{{ asset('assets/images/banner/shape/03.png') }}"src="{{ asset('assets/images/banner/shape/03.png') }}" alt="banner" class="three">
+{{--                            <img src="{{ asset('assets/images/banner/shape/01.png') }}"src="{{ asset('assets/images/banner/shape/01.png') }}" alt="banner" class="one">--}}
+{{--                            <img src="{{ asset('assets/images/banner/shape/02.png') }}"src="{{ asset('assets/images/banner/shape/02.png') }}" alt="banner" class="two">--}}
+{{--                            <img src="{{ asset('assets/images/banner/shape/03.png') }}"src="{{ asset('assets/images/banner/shape/03.png') }}" alt="banner" class="three">--}}
                         </div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-12">
-                                    <div class="banner-one-main-wrapper">
+                                    <div class="banner-one-main-wrapper" style="position: absolute;bottom: -85px;left: 41px;">
                                         <div class="inner">
-                                            <span class="sub-title">Business Consulting Agency</span>
-                                            <h1 class="title">Redefining Urban Landscapes</h1>
+{{--                                            <span class="sub-title">Business Consulting Agency</span>--}}
+                                            <h1 class="title"></h1>
                                             <p class="disc">
-                                                We help small startups grow from idea to millions of users. we can also <br>
-                                            automate your marketing and customer service.
+                                                Descoperă eleganța unui complex rezidențial cu vedere la lac. <br>
+                                                Apartamente spațioase, finisaje rafinate și o atmosferă de relaxare absolută.
                                             </p>
                                             <div class="button-area-banner-one">
-                                                <a href="{{ route('service') }}" class="tmp-btn btn-primary">Get Started Now</a>
+                                                <a href="{{ route('service') }}" class="tmp-btn btn-primary">Apartamente randate 3D</a>
                                                 <!-- video icon -->
-                                                <div class="vedio-icone" data-tmp-cursor="lg" data-tmp-cursor-text="Play Video">
+                                                <div class="vedio-icone d-none" data-tmp-cursor="lg" data-tmp-cursor-text="Play Video">
                                                     <a class="video-play-button play-video" href="#">
                                                         <span></span>
                                                         <p class="text">
@@ -198,9 +198,9 @@
                 <div class="swiper-slide">
                     <div class="tmp-banner-area bg_image-3 bg_image banner-one-height-control construction-2 tmp-section-gap">
                         <div class="shape-image-banner-one">
-                            <img src="{{ asset('assets/images/banner/shape/01.png') }}"src="{{ asset('assets/images/banner/shape/01.png') }}" alt="banner" class="one">
-                            <img src="{{ asset('assets/images/banner/shape/02.png') }}"src="{{ asset('assets/images/banner/shape/02.png') }}" alt="banner" class="two">
-                            <img src="{{ asset('assets/images/banner/shape/03.png') }}"src="{{ asset('assets/images/banner/shape/03.png') }}" alt="banner" class="three">
+{{--                            <img src="{{ asset('assets/images/banner/shape/01.png') }}"src="{{ asset('assets/images/banner/shape/01.png') }}" alt="banner" class="one">--}}
+{{--                            <img src="{{ asset('assets/images/banner/shape/02.png') }}"src="{{ asset('assets/images/banner/shape/02.png') }}" alt="banner" class="two">--}}
+{{--                            <img src="{{ asset('assets/images/banner/shape/03.png') }}"src="{{ asset('assets/images/banner/shape/03.png') }}" alt="banner" class="three">--}}
                         </div>
                         <div class="container">
                             <div class="row">
@@ -245,7 +245,7 @@
     </div>
     <!-- tmp banner area end -->
 
-    <div class="best-service-we-provide tmp-section-gapTop">
+    <div class="d-none best-service-we-provide tmp-section-gapTop">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
@@ -342,9 +342,10 @@
                             <img src="{{ asset('assets/images/about/about-2.jpg') }}"src="{{ asset('assets/images/about/about-2.jpg') }}" alt="construction_business">
                         </div>
                         <div class="shape-bottom-left"></div>
+                        <div class="shape-bottom-right"></div>
                         <div class="work-done">
-                            <h3 class="title"><span class="counter">3025</span>+</h3>
-                            <p>Conpleated Work</p>
+                            <h3 class="title"><span class="counter">48</span>+</h3>
+                            <p>Apartamente</p>
                         </div>
                     </div>
                 </div>
@@ -353,18 +354,18 @@
                         <div class="section-head text-align-left section-head-one-side">
                             <div class="section-sub-title">
                                 <img src="{{ asset('assets/images/services/section-custom-menubar.png ') }}"src="{{ asset('assets/images/services/section-custom-menubar.png ') }}" alt="Corporate_service">
-                                <span class="subtitle">ABOUT US</span>
+                                <span class="subtitle">Despre noi</span>
                             </div>
-                            <h2 class="title split-collab">Find out more about our <br> business Construction</h2>
+                            <h2 class="title split-collab">Cateva cuvinte despre <br> Lake View Lux Residence</h2>
                         </div>
 
                         <p class="description" data-sal-delay="200" data-sal="slide-up" data-sal-duration="800">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget ornare quam. Sed sit amet sem sollicitudin, condimentum diam sed, consequat tellus. Quisque ac odio eget ligula gravida efficitur. Nunc facilisis sagittis magna, non venenatis mauris luctus quis.
+                            Complex rezidențial de lux cu vedere panoramică la lac, apartamente spațioase, finisaje premium, spații verzi, locuri de relaxare și facilități moderne, proiectat pentru confort și eleganță, oferind un stil de viață exclusivist într-o locație liniștită și deosebit de atractivă.
                         </p>
                         <!-- Prograss bar Start  -->
                         <div class="single-progress-area progress-stye-one" data-sal-delay="250" data-sal="slide-up" data-sal-duration="800">
                             <div class="progress-top">
-                                <p class="name">Consulting Service</p>
+                                <p class="name">Lorem ipsum</p>
                                 <span class="parcent">
                                     85%
                                 </span>
@@ -375,7 +376,7 @@
                         </div>
                         <div class="single-progress-area progress-stye-one" data-sal-delay="300" data-sal="slide-up" data-sal-duration="800">
                             <div class="progress-top">
-                                <p class="name">Finance Consulting</p>
+                                <p class="name">Lorem ipsum 2</p>
                                 <span class="parcent">
                                     66%
                                 </span>
@@ -386,7 +387,7 @@
                         </div>
                         <!-- Prograss bar End  -->
                         <div class="thumbnail-with-title mt--50" data-sal-delay="350" data-sal="slide-up" data-sal-duration="800">
-                            <a href="{{ route('contact') }}" class="tmp-btn btn-primary">Contact Us</a>
+                            <a href="{{ route('contact') }}" class="tmp-btn btn-primary">Contacteaza-ne</a>
                         </div>
                     </div>
                 </div>
@@ -396,16 +397,16 @@
     <!--Tpm About Area End  -->
 
     <!-- Start Service Area  -->
-    <div class="service-area tmp-section-gapBottom" id="service">
+    <div class="service-area tmp-section-gapBottom d-none" id="service">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-head">
                         <div class="section-sub-title center-title">
                             <img src="{{ asset('assets/images/services/section-custom-menubar.png ') }}"src="{{ asset('assets/images/services/section-custom-menubar.png ') }}" alt="Business_Consulting_services">
-                            <span>OUR SERVICES</span>
+                            <span>Serviciile noastre</span>
                         </div>
-                        <h2 class="title split-collab">Our Provided Services</h2>
+                        <h2 class="title split-collab">Ce oferim</h2>
                     </div>
                 </div>
             </div>
@@ -415,7 +416,7 @@
                         <div class="icon">
                             <img src="{{ asset('assets/images/services/service-icon-1.png') }}"src="{{ asset('assets/images/services/service-icon-1.png') }}" alt="corporate Business Services">
                         </div>
-                        <div class="content">
+                        <div class="d-none content">
                             <h2 class="title">Roofing Installation</h2>
                             <p class="description">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
@@ -534,7 +535,7 @@
     <!-- End Service Area  -->
 
     <!-- Start Main Counter up-5 Area  -->
-    <div class="tmp-counterup-area tmp-section-gapBottom">
+    <div class="tmp-counterup-area tmp-section-gapBottom d-none">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -597,9 +598,9 @@
                     <div class="section-head">
                         <div class="section-sub-title center-title">
                             <img src="{{ asset('assets/images/services/section-custom-menubar.png ') }}"src="{{ asset('assets/images/services/section-custom-menubar.png ') }}" alt="Corporate_service">
-                            <span class="subtitle">OUR work process</span>
+                            <span class="subtitle">Randare 3D</span>
                         </div>
-                        <h2 class="title split-collab">Our Working Process</h2>
+                        <h2 class="title split-collab">Apartamente Randate 3D</h2>
                     </div>
                 </div>
             </div>
@@ -618,9 +619,9 @@
 
                             </div>
                             <div class="services-content services-content-style-1 text-center">
-                                <h5 class="title">Meeting Client</h5>
+                                <h5 class="title">Penthouse <br> Luxul la superlativ</h5>
                                 <p class="description">
-                                    Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse.
+                                    Cu spații ample, ferestre panoramice, terasă privată cu vedere spectaculoasă și dotări exclusiviste, penthouse-ul redefinește eleganța și confortul pentru cei care apreciază calitatea premium.
                                 </p>
                             </div>
                         </div>
@@ -640,9 +641,9 @@
 
                             </div>
                             <div class="services-content services-content-style-1 text-center">
-                                <h5 class="title">Project Strategy</h5>
+                                <h5 class="title">Apartament cu 2 camere <br> Confort și funcționalitate</h5>
                                 <p class="description">
-                                    Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse.
+                                    Perfect pentru cupluri sau familii mici, acest apartament oferă un living luminos, un dormitor spațios, o bucătărie modernă și un balcon cu vedere la lac, ideal pentru momente de relaxare.
                                 </p>
                             </div>
                         </div>
@@ -658,12 +659,12 @@
                                     <div class="number-bg-round">
                                         <span>03</span>
                                     </div>
-                            </div></a>
+                            </a>
 
                             <div class="services-content services-content-style-1 text-center">
-                                <h5 class="title">Campaign Design</h5>
+                                <h5 class="title">Azpartament cu 3 camere <br> Spațiu și rafinament</h5>
                                 <p class="description">
-                                    Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse.
+                                    Potrivit pentru familii, include un living generos, două dormitoare, o bucătărie deschisă, două băi și o terasă cu priveliște panoramică. Design modern și finisaje de top.
                                 </p>
                             </div>
                         </div>
@@ -684,9 +685,9 @@
                     <div class="section-head color-white">
                         <div class="section-sub-title center-title">
                             <img src="{{ asset('assets/images/services/section-custom-menubar.png ') }}"src="{{ asset('assets/images/services/section-custom-menubar.png ') }}" alt="Corporate_service">
-                            <span class="subtitle">OUR PORTFOLIO</span>
+                            <span class="subtitle">Unde vei locui</span>
                         </div>
-                        <h2 class="title split-collab">Let's Check Our Best Works </h2>
+                        <h2 class="title split-collab">Mai multe poze cu complexul visurilor tale </h2>
                     </div>
                 </div>
             </div>
@@ -785,7 +786,7 @@
                                         <a href="{{ route('projects-details') }}" class="thumbnail">
                                             <img src="{{ asset('assets/images/portfolio/portfolio-7.png') }}"src="{{ asset('assets/images/portfolio/portfolio-7.png') }}" alt="corporate_business">
                                         </a>
-                                        <div class="inner-content">
+                                        <div class="inner-content d-none">
                                             <a href="{{ route('projects-details') }}">
                                                 <h5 class="title">Business Layout Library</h5>
                                             </a>
@@ -816,9 +817,9 @@
                     <div class="section-head">
                         <div class="section-sub-title center-title">
                             <img src="{{ asset('assets/images/services/section-custom-menubar.png ') }}"src="{{ asset('assets/images/services/section-custom-menubar.png ') }}" alt="Corporate_service">
-                            <span class="subtitle">QUESTION AND ANSWERS</span>
+                            <span class="subtitle">Intrenari si Raspunsuri</span>
                         </div>
-                        <h2 class="title split-collab">Frequency Asked Questions</h2>
+                        <h2 class="title split-collab">Intrebari si raspunsuri frecvente</h2>
                     </div>
                 </div>
             </div>
@@ -837,7 +838,7 @@
 
                                         <div class="accordion-button-left">
                                             <i class="fa-regular fa-question"></i>
-                                            <span>Why is collaborative learning so important</span>
+                                            <span>Cati metri patrati are fiecare apartament?</span>
                                         </div>
                                         <div class="accordion-button-right">
                                             <i class="fa-sharp fa-light fa-arrow-right"></i>
@@ -846,7 +847,7 @@
                                 </div>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Companions shy had solicitude favorable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she.
+                                        Apartamentele sunt de 52, 62 si 70 metri patrati.
                                     </div>
                                 </div>
                             </div>
@@ -855,7 +856,7 @@
                                     <div class="accordion-button collapsed" data-bs-toggle="collapse" role="button" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         <div class="accordion-button-left">
                                             <i class="fa-regular fa-question"></i>
-                                            <span>Do you offer free trials</span>
+                                            <span>Unde se afla complexul?</span>
                                         </div>
                                         <div class="accordion-button-right">
                                             <i class="fa-sharp fa-light fa-arrow-right"></i>
@@ -864,7 +865,9 @@
                                 </div>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Companions shy had solicitude favorable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she.
+                                        Compelxul se afla pe Soseauia Valea Rediului Nr.161 <br>
+                                        Foloseste <a style="text-decoration: none; color: var(--color-primary)" href="https://maps.app.goo.gl/zccrBKJ7gBEVKufD8">Google Maps</a> pentru a ajunge mai rapid:
+
                                     </div>
                                 </div>
                             </div>
@@ -873,7 +876,7 @@
                                     <div class="accordion-button collapsed" data-bs-toggle="collapse" role="button" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                         <div class="accordion-button-left">
                                             <i class="fa-regular fa-question"></i>
-                                            <span>Can I share my courses with non-registered users</span>
+                                            <span>Cat la suta este avansul?</span>
                                         </div>
                                         <div class="accordion-button-right">
                                             <i class="fa-sharp fa-light fa-arrow-right"></i>
@@ -882,7 +885,7 @@
                                 </div>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Companions shy had solicitude favorable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she.
+                                        Avansul se face la incheierea antecontractului si va fi in valoare de 10% din valoarea totala a propietatii.
                                     </div>
                                 </div>
                             </div>
@@ -891,7 +894,7 @@
                                     <div class="accordion-button collapsed" data-bs-toggle="collapse" role="button" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                         <div class="accordion-button-left">
                                             <i class="fa-regular fa-question"></i>
-                                            <span>Can I share my courses with non-registered users</span>
+                                            <span>Se poate face credit prima casa?</span>
                                         </div>
                                         <div class="accordion-button-right">
                                             <i class="fa-sharp fa-light fa-arrow-right"></i>
@@ -900,16 +903,16 @@
                                 </div>
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Companions shy had solicitude favorable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she.
+                                        Sigur , se poate face orice fel de credit , in functie de ...
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="faq-buttom">
-                            <h4 class="title">Still Have More Questions?
+                            <h4 class="title">Inca aveti intrebari?
                             </h4>
-                            <p>Contact Our <a href="#">Expert Support Team</a></p>
+                            <p>Contactteaza unul dintre <a href="#">Agentii Nostri</a></p>
                         </div>
 
                     </div>
@@ -921,7 +924,7 @@
     <!-- Tmp FAQ area Start  -->
 
     <!-- Start team area  -->
-    <div class="team-area tmp-section-gap bg-white">
+    <div class="team-area tmp-section-gap bg-white d-none">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -1037,7 +1040,7 @@
     </div>
     <!-- End team area  -->
 
-    <div class="tmp-video-section-start-one tmp-section-gapBottom">
+    <div class="tmp-video-section-start-one tmp-section-gapBottom d-none">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -1052,7 +1055,7 @@
     </div>
 
     <!-- Start Testimonial with brand  -->
-    <div class="testimonial-with-brand bg-1 bg_image">
+    <div class="testimonial-with-brand bg-1 bg_image d-none">
         <!-- Start Testimonial Area  -->
         <div class="testimonial-brand-area tmp-section-gapTop">
             <div class="container">
@@ -1262,9 +1265,9 @@
                 <div class="col-lg-5">
                     <div class="contact-inner">
                         <div class="section-head section-head-one-side text-align-left" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                            <span class="title">Contact Us</span>
+                            <span class="title">Contacteaza-ne</span>
                             <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor magnaaliqua.
+                                Numai la un apel distanta, colegii nostri iti vor raspunde in cel mai scurt timp posibil , in functie de perioada.
                             </p>
                         </div>
 
@@ -1275,8 +1278,8 @@
                                         <i class="fa-light fa-phone"></i>
                                     </div>
                                     <div class="content">
-                                        <span>Call Us</span>
-                                        <a class="contact-here" href="#">+123 34598768</a>
+                                        <span>Telefon</span>
+                                        <a class="contact-here" href="#">+40744116678</a>
                                     </div>
                                 </div>
                             </li>
@@ -1290,7 +1293,7 @@
 
                                     <div class="content">
                                         <span>E-mail</span>
-                                        <a class="contact-here" href="#">info@uibundle.com</a>
+                                        <a class="contact-here" href="#">info@etconstruct.com</a>
                                     </div>
 
                                 </div>
@@ -1302,8 +1305,8 @@
                                         <i class="fa-solid fa-map-location-dot"></i>
                                     </div>
                                     <div class="content">
-                                        <span>Address</span>
-                                        <a class="contact-here" href="#">25/5 Double Street, Texas Houston USA</a>
+                                        <span>Sediu</span>
+                                        <a class="contact-here" href="#">Soseaua Pacurari Nr.125 , Iasi</a>
                                     </div>
                                 </div>
                             </li>
@@ -1312,10 +1315,12 @@
 
                         <div class="tmp-tag-list tag-list-one" data-sal-delay="350" data-sal="slide-up" data-sal-duration="800">
                             <a class="tag-list" href="#">Facebook</a>
-                            <a class="tag-list" href="#">Twitter</a>
-                            <a class="tag-list" href="#">Linkedin</a>
-                            <a class="tag-list" href="#">Skype</a>
-                            <a class="tag-list" href="#">Pinterest</a>
+                            <a class="tag-list" href="#">Instagram</a>
+                            <a class="tag-list" href="#">Google</a>
+{{--                            <a class="tag-list" href="#">Twitter</a>--}}
+{{--                            <a class="tag-list" href="#">Linkedin</a>--}}
+{{--                            <a class="tag-list" href="#">Skype</a>--}}
+{{--                            <a class="tag-list" href="#">Pinterest</a>--}}
                         </div>
 
                     </div>
@@ -1325,47 +1330,42 @@
 
                     <div class="contact-inner">
                         <div class="section-head section-head-one-side text-align-left">
-                            <span class="title">GET IN TOUCH</span>
+                            <span class="title">Afla mai multe informatii</span>
                             <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor magnaaliqua.
+                                Completeaza aici cu ce ati dori sa aflati iar unul dintre agentii nostri te vor contacta de indata ce primim solicitarea.
                             </p>
                         </div>
                         <div class="contact-form style-two">
-                            <form id="contact-form" action="#">
+                            <form id="contact-form" action="{{route('saveContactForm')}}" method="post">
+                                @csrf
                                 <div class="contact-form-wrapper row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <input class="input-field" name="contact-name" placeholder="Name" id="contact-name" type="text" required>
+                                            <input class="input-field" name="contact-name" placeholder="Nume Prenume" id="contact-name" type="text" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <input class="input-field" name="contact-phone" placeholder="Phone" type="text">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <input class="input-field" name="contact-phone" placeholder="Email" type="email" required>
+                                            <input class="input-field" name="contact-phone" placeholder="Numar de telefon" type="text">
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <input class="input-field" type="text" id="subject" placeholder="Website" name="Website">
+                                            <input class="input-field" name="contact-email" placeholder="Email" type="email" required>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <textarea class="input-field" placeholder="How can we help" name="contact-message" id="contact-message"></textarea>
+                                            <textarea class="input-field" placeholder="Spune-ne mai multe despre ce ai dori sa afli" name="contact-message" id="contact-message"></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12">
                                         <div class="form-submit-group">
                                             <button name="submit" class="tmp-btn btn-primary" type="submit" id="submit">
-                                                Submit Now
+                                                Salveaza
                                             </button>
                                         </div>
                                     </div>
@@ -1381,7 +1381,7 @@
     <!-- End Contact Area  -->
 
     <!-- Join Us One Start -->
-    <div class="join-us-one mt--120">
+    <div class="join-us-one mt--120 d-none">
         <div class="container">
             <div class="join-us-one__inner">
                 <div class="join-us-one__shape-1">
@@ -1407,7 +1407,7 @@
     <!-- Join Us One End -->
 
     <!-- Tmp Blog Area Start  -->
-    <div class="tmp-blog-area tmp-section-gap">
+    <div class="tmp-blog-area tmp-section-gap d-none">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

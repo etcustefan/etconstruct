@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\HomeController;
@@ -43,6 +44,7 @@ Route::prefix('pages/')->group(function () {
 
 // OnePage
 Route::prefix('onepage/')->group(function () {
+    Route::post('/saveContactForm', [FormController::class, 'saveContactForm'])->name('saveContactForm');
     Route::controller(OnePageController::class)->group(function () {
         Route::get('onepage-one','onePage_one')->name('onepage-one');
         Route::get('onepage-two','onePage_two')->name('onepage-two');

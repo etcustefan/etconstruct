@@ -1,7 +1,7 @@
     <!-- Start Footer Area  -->
-    <footer class="footer-area footer-style-one-wrapper bg-color-footer bg_images tmp-section-gap">
+    <footer class="footer-area footer-style-one-wrapper bg-color-footer bg_images tmp-section-gap" style="margin-top:40px;border-top-left-radius: 20px;border-top-right-radius: 20px">
         <div class="container">
-            <div class="row">
+            <div class="row d-none">
                 <div class="col-lg-12">
                     <div class="subscribe-area subscribe-style-1">
                         <div class="subscribe-inner">
@@ -18,7 +18,7 @@
             </div>
             <div class="footer-main footer-style-one">
                 <div class="row g-5">
-                    <div class="col-lg-4 col-md-6">
+                    <div style="width: 33%;" class="col-lg-4 col-md-6">
                         <div class="single-footer-wrapper border-right mr--20">
                             <div class="logo">
                                 <a href="{{ route('index') }}">
@@ -34,8 +34,8 @@
                             <div class="day-time">
                                 <div class="icon"><i class="fa-solid fa-alarm-clock"></i></div>
                                 <div class="content">
-                                    <div class="day">Sunday - Friday:</div>
-                                    <div class="time">9:00 AM – 8:00 PM</div>
+                                    <div class="day">Luni - Vineri:</div>
+                                    <div class="time">9:00 – 17:00</div>
                                 </div>
                             </div>
 
@@ -47,28 +47,27 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-6">
+                    <div style="width: 33%;" class="col-lg-2 col-md-6">
                         <div class="single-footer-wrapper pl-50 pl_md--0 pl_sm--0">
-                            <h5 class="ft-title">Quick Link</h5>
+                            <h5 class="ft-title">Linkuri Ajutatoare</h5>
                             <ul class="ft-link">
                                 <li>
-                                    <a href="{{ route('about') }}">About Company</a>
+                                    <a href="{{ route('about') }}">Despre noi</a>
                                 </li>
-                                <li>
+                                <li class="d-none">
                                     <a href="{{ route('team') }}">Meet Our Team</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('service') }}">Our Services</a>
+                                    <a href="{{ route('service') }}">Ce oferim</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('blog') }}">News & Media</a>
+                                    <a href="{{ route('blog') }}">Randare 3D</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('contact') }}">Contact Us</a>
+                                    <a href="{{ route('contact') }}">Contact</a>
                                 </li>
-
                                 <li>
-                                    <a href="{{ route('faq') }}">Support</a>
+                                    <a href="{{ route('faq') }}">Suport</a>
                                 </li>
 
                             </ul>
@@ -76,7 +75,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 d-none">
                         <div class="single-footer-wrapper pr--15">
                             <h5 class="ft-title">Recent Post</h5>
 
@@ -111,12 +110,11 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6">
+                    <div style="width: 33%;" class="col-lg-3 col-md-6">
                         <div class="single-footer-wrapper">
-                            <h5 class="ft-title">Official info:</h5>
+                            <h5 class="ft-title">Adresa Sedilui:</h5>
                             <ul class="ft-link">
-                                <li class="ft-location">5919 Trussville Crossings Pkwy, new
-                                    Dusting town, Austria</li>
+                                <li class="ft-location">Strada Păcurari 136, Iași 707410</li>
 
                                 <li>
                                     <div class="single-contact">
@@ -127,7 +125,7 @@
 
                                         <div class="content">
                                             <span>E-mail:</span>
-                                            <a href="mailto:webmaster@example.com">info@uibundle.com</a>
+                                            <a href="mailto:info@etconstruct.ro">info@etconstruct.ro</a>
                                         </div>
 
                                     </div>
@@ -140,7 +138,7 @@
                                         </div>
                                         <div class="content">
                                             <span>Phone:</span>
-                                            <a href="tel:+4733378901">+123 34598768</a>
+                                            <a href="tel:+40744116678">+40 744 116 667</a>
                                         </div>
 
                                     </div>
@@ -154,12 +152,12 @@
             </div>
         </div>
     </footer>
-    <div class="copyright-area-one">
+    <div class="copyright-area-one" style="border-bottom-left-radius: 20px;border-bottom-right-radius: 20px">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="main-wrapper">
-                        <p>© Copyright 2024. All Rights Reserved by <a href="#">Bizper</a></p>
+                        <p>© Copyright 2024. Ne rezervam drepturile de autor <a href="#">Etconstruct</a></p>
                     </div>
                 </div>
             </div>
