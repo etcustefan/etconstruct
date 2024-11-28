@@ -18,7 +18,6 @@ RUN apt-get update && apt-get install -y \
         unzip \
         jpegoptim \
         optipng \
-        a2enmod \
         pngquant \
         gifsicle
 
@@ -43,8 +42,6 @@ RUN docker-php-ext-install exif
 RUN pecl install apcu
 
 RUN docker-php-ext-enable apcu
-
-RUN a2enmod rewrite
 
 # Install Supervisor
 RUN apt-get install -y supervisor
