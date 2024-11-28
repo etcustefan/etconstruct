@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
         jpegoptim \
         optipng \
         pngquant \
+        composer \
         gifsicle
 
 RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg
