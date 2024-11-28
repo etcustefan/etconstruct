@@ -53,7 +53,7 @@ RUN yes | apt-get install nodejs
 RUN yes | apt-get install npm
 
 # Copy Supervisor configuration file for Laravel Queue Worker
-COPY docker/prod/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -63,10 +63,10 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 COPY . /var/www/hml
 
 # Copy your Apache virtual host configuration
-COPY docker/prod/vhost.conf /etc/apache2/sites-available/000-default.conf
+COPY docker/vhost.conf /etc/apache2/sites-available/000-default.conf
 
 # Copy your php.ini configuration
-COPY docker/prod/php.ini /usr/local/etc/php/php.ini
+COPY docker/php.ini /usr/local/etc/php/php.ini
 
 # Copy .env.example and rename it to .env
 COPY .env.example /var/www/html/.env
@@ -84,7 +84,7 @@ RUN php artisan view:clear
 RUN php artisan storage:link
 
 # Custom entrypoint script
-COPY docker/prod/entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # In order to fix it for now, I wil set 777 permissions. But this is very UNSAFE
