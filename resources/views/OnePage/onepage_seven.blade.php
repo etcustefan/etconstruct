@@ -232,10 +232,10 @@
                             </div>
                             <div class="services-content services-content-style-1 text-center">
                                 <h5 class="title">
-                                    {{$apartment['title']}}
+                                    {!! str($apartment['title'])->sanitizeHtml() !!}
                                 </h5>
                                 <p class="description">
-                                    {{$apartment['description']}}
+                                    {!! str($apartment['description'])->sanitizeHtml() !!}
                                 </p>
                             </div>
                         </div>

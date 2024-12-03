@@ -23,11 +23,11 @@ class ApartmentResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
+                Forms\Components\RichEditor::make('title')
                                           ->required(),
                 Forms\Components\TextInput::make('type')
                                           ->required(),
-                Forms\Components\Textarea::make('description')
+                Forms\Components\RichEditor::make('description')
                                          ->columnSpanFull(),
                 Forms\Components\TextInput::make('square_meters')
                                           ->required()
