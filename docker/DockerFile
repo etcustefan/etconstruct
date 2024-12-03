@@ -79,6 +79,8 @@ RUN php artisan key:generate
 # RUN php artisan cache:clear
 RUN php artisan view:clear
 RUN php artisan storage:link
+RUN php artisan filament:optimize
+RUN php artisan filament:optimize-clear
 
 # Custom entrypoint script
 COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
