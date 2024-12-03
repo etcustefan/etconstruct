@@ -12,7 +12,8 @@ class Apartment extends Model
         'description',
         'square_meters',
         'rooms',
-        'company_id'
+        'company_id',
+        'image_path'
     ];
 
     public function company(): \Illuminate\Database\Eloquent\Relations\BelongsTo

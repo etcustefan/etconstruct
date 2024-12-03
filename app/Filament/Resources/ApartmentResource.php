@@ -24,22 +24,25 @@ class ApartmentResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->required(),
+                                          ->required(),
                 Forms\Components\TextInput::make('type')
-                    ->required(),
+                                          ->required(),
                 Forms\Components\Textarea::make('description')
-                    ->columnSpanFull(),
+                                         ->columnSpanFull(),
                 Forms\Components\TextInput::make('square_meters')
-                    ->required()
-                    ->numeric(),
+                                          ->required()
+                                          ->numeric(),
                 Forms\Components\TextInput::make('rooms')
-                    ->numeric(),
+                                          ->numeric(),
                 Forms\Components\Select::make('company_id')
-                    ->relationship('company', 'id')
-                    ->required(),
+                                       ->relationship('company', 'id')
+                                       ->required(),
                 Forms\Components\FileUpload::make('image_path')
-                    ->image()
-                    ->required(),
+                                           ->disk('apartments')
+                                           ->image()
+                                           ->openable()
+                                           ->downloadable()
+                                           ->required(),
             ]);
     }
 
@@ -48,26 +51,26 @@ class ApartmentResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
+                                         ->searchable(),
                 Tables\Columns\TextColumn::make('type')
-                    ->searchable(),
+                                         ->searchable(),
                 Tables\Columns\TextColumn::make('square_meters')
-                    ->numeric()
-                    ->sortable(),
+                                         ->numeric()
+                                         ->sortable(),
                 Tables\Columns\TextColumn::make('rooms')
-                    ->numeric()
-                    ->sortable(),
+                                         ->numeric()
+                                         ->sortable(),
                 Tables\Columns\TextColumn::make('company.id')
-                    ->numeric()
-                    ->sortable(),
+                                         ->numeric()
+                                         ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                                         ->dateTime()
+                                         ->sortable()
+                                         ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                                         ->dateTime()
+                                         ->sortable()
+                                         ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\ImageColumn::make('image_path'),
             ])
             ->filters([
@@ -93,9 +96,9 @@ class ApartmentResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListApartments::route('/'),
+            'index'  => Pages\ListApartments::route('/'),
             'create' => Pages\CreateApartment::route('/create'),
-            'edit' => Pages\EditApartment::route('/{record}/edit'),
+            'edit'   => Pages\EditApartment::route('/{record}/edit'),
         ];
     }
 }

@@ -56,6 +56,22 @@ return [
             'throw' => false,
         ],
 
+        'constructions' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/constructions'),
+            'url' => env('APP_URL').'/storage/constructions',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
+        'apartments' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/apartments'),
+            'url' => env('APP_URL').'/storage/apartments',
+            'visibility' => 'public',
+            'throw' => false,
+        ]
+
     ],
 
     /*

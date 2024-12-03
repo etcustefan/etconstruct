@@ -24,8 +24,11 @@ class MainGalleryResource extends Resource
         return $form
             ->schema([
                 Forms\Components\FileUpload::make('image_path')
-                    ->image()
-                    ->required(),
+                                           ->disk('constructions')
+                                           ->image()
+                                           ->openable()
+                                           ->downloadable()
+                                           ->required(),
                 Forms\Components\TextInput::make('video_path'),
                 Forms\Components\TextInput::make('heading_text'),
                 Forms\Components\TextInput::make('text'),
@@ -40,23 +43,23 @@ class MainGalleryResource extends Resource
             ->columns([
                 Tables\Columns\ImageColumn::make('image_path'),
                 Tables\Columns\TextColumn::make('video_path')
-                    ->searchable(),
+                                         ->searchable(),
                 Tables\Columns\TextColumn::make('heading_text')
-                    ->searchable(),
+                                         ->searchable(),
                 Tables\Columns\TextColumn::make('text')
-                    ->searchable(),
+                                         ->searchable(),
                 Tables\Columns\TextColumn::make('button_text')
-                    ->searchable(),
+                                         ->searchable(),
                 Tables\Columns\TextColumn::make('button_action')
-                    ->searchable(),
+                                         ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                                         ->dateTime()
+                                         ->sortable()
+                                         ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                                         ->dateTime()
+                                         ->sortable()
+                                         ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
@@ -81,9 +84,9 @@ class MainGalleryResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListMainGalleries::route('/'),
+            'index'  => Pages\ListMainGalleries::route('/'),
             'create' => Pages\CreateMainGallery::route('/create'),
-            'edit' => Pages\EditMainGallery::route('/{record}/edit'),
+            'edit'   => Pages\EditMainGallery::route('/{record}/edit'),
         ];
     }
 }
