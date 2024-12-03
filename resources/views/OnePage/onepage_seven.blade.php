@@ -89,29 +89,24 @@
     <div class="tmp-banner-swiper-one-area construction-2" id="home">
         <div class="swiper mySwiper-banner-one-construction">
             <div class="swiper-wrapper">
-                <!-- single swiper area start -->
-                <div class="swiper-slide">
-                    <div class="tmp-banner-area bg_image-1 bg_image banner-one-height-control construction-2 tmp-section-gap">
-                        <div class="shape-image-banner-one">
-                            {{--                            <img src="{{ asset('assets/images/banner/shape/01.png') }}"src="{{ asset('assets/images/banner/shape/01.png') }}" alt="banner" class="one">--}}
-                            {{--                            <img src="{{ asset('assets/images/banner/shape/02.png') }}"src="{{ asset('assets/images/banner/shape/02.png') }}" alt="banner" class="two">--}}
-                            {{--                            <img src="{{ asset('assets/images/banner/shape/03.png') }}"src="{{ asset('assets/images/banner/shape/03.png') }}" alt="banner" class="three">--}}
-                        </div>
+                {{$_i = 1}}
+                <?php foreach ($mainGallery as $row):?>
+                    <div class="swiper-slide">
+                        <div class="tmp-banner-area asdbg_image-{{$_i}} bg_image banner-one-height-control construction-2 tmp-section-gap" style="background-image: url(<?= 'storage/constructions/' . $row['image_path']?>)">
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-12">
-                                    <div class="banner-one-main-wrapper">
+                                    <div class="banner-one-main-wrapper" <?php if($_i == 2){echo 'style="position: absolute;bottom: -85px;left: 41px;"';} ?>>
                                         <div class="inner">
-                                            {{--                                            <span class="sub-title">Lake View Lux Residence</span>--}}
-                                            <h1 class="title">Apartamentul visurilor tale</h1>
+                                            <h1 class="title">{{$row['heading_text']}}</h1>
                                             <p class="disc">
-                                                Complex rezidențial situat pe malul lacului, <br>
-                                                oferind apartamente moderne, finisaje de lux, panoramă spectaculoasă și un stil de viață exclusivist.
+                                                <?= $row['text'] ?>
                                             </p>
                                             <div class="button-area-banner-one">
-                                                <a href="{{ route('service') }}" class="tmp-btn btn-primary">Solicita o vizionare</a>
+                                                <a href="#{{$row['button_action']}}" class="tmp-btn btn-primary">{{$row['button_text']}}</a>
                                                 <!-- video icon -->
-                                                <div class="vedio-icone d-none" data-tmp-cursor="lg" data-tmp-cursor-text="Play Video">
+                                                <?php if($row['video_path']): ?>
+                                                    <div class="vedio-icone d-none" data-tmp-cursor="lg" data-tmp-cursor-text="Play Video">
                                                     <a class="video-play-button play-video" href="#">
                                                         <span></span>
                                                         <p class="text">
@@ -122,6 +117,7 @@
                                                         <a class="video-overlay-close">×</a>
                                                     </div>
                                                 </div>
+                                                <?php endif; ?>
                                                 <!-- video icon -->
                                             </div>
                                         </div>
@@ -131,93 +127,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- single swiper area start -->
-                <!-- single swiper area start -->
-                <div class="swiper-slide">
-                    <div class="tmp-banner-area bg_image-2 bg_image banner-one-height-control construction-2 tmp-section-gap">
-                        <div class="shape-image-banner-one">
-                            {{--                            <img src="{{ asset('assets/images/banner/shape/01.png') }}"src="{{ asset('assets/images/banner/shape/01.png') }}" alt="banner" class="one">--}}
-                            {{--                            <img src="{{ asset('assets/images/banner/shape/02.png') }}"src="{{ asset('assets/images/banner/shape/02.png') }}" alt="banner" class="two">--}}
-                            {{--                            <img src="{{ asset('assets/images/banner/shape/03.png') }}"src="{{ asset('assets/images/banner/shape/03.png') }}" alt="banner" class="three">--}}
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="banner-one-main-wrapper" style="position: absolute;bottom: -85px;left: 41px;">
-                                        <div class="inner">
-                                            {{--                                            <span class="sub-title">Business Consulting Agency</span>--}}
-                                            <h1 class="title"></h1>
-                                            <p class="disc">
-                                                Descoperă eleganța unui complex rezidențial cu vedere la lac. <br>
-                                                Apartamente spațioase, finisaje rafinate și o atmosferă de relaxare absolută.
-                                            </p>
-                                            <div class="button-area-banner-one">
-                                                <a href="{{ route('service') }}" class="tmp-btn btn-primary">Apartamente randate 3D</a>
-                                                <!-- video icon -->
-                                                <div class="vedio-icone d-none" data-tmp-cursor="lg" data-tmp-cursor-text="Play Video">
-                                                    <a class="video-play-button play-video" href="#">
-                                                        <span></span>
-                                                        <p class="text">
-                                                            Play Vedio
-                                                        </p>
-                                                    </a>
-                                                    <div class="video-overlay">
-                                                        <a class="video-overlay-close">×</a>
-                                                    </div>
-                                                </div>
-                                                <!-- video icon -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single swiper area start -->
-                <!-- single swiper area start -->
-                <div class="swiper-slide">
-                    <div class="tmp-banner-area bg_image-3 bg_image banner-one-height-control construction-2 tmp-section-gap">
-                        <div class="shape-image-banner-one">
-                            {{--                            <img src="{{ asset('assets/images/banner/shape/01.png') }}"src="{{ asset('assets/images/banner/shape/01.png') }}" alt="banner" class="one">--}}
-                            {{--                            <img src="{{ asset('assets/images/banner/shape/02.png') }}"src="{{ asset('assets/images/banner/shape/02.png') }}" alt="banner" class="two">--}}
-                            {{--                            <img src="{{ asset('assets/images/banner/shape/03.png') }}"src="{{ asset('assets/images/banner/shape/03.png') }}" alt="banner" class="three">--}}
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="banner-one-main-wrapper">
-                                        <div class="inner">
-                                            <span class="sub-title">Business Consulting Agency</span>
-                                            <h1 class="title">From Concept to Construction</h1>
-                                            <p class="disc">
-                                                We help small startups grow from idea to millions of users. we can also <br>
-                                                automate your marketing and customer service.
-                                            </p>
-                                            <div class="button-area-banner-one">
-                                                <a href="{{ route('service') }}" class="tmp-btn btn-primary">Get Started Now</a>
-                                                <!-- video icon -->
-                                                <div class="vedio-icone" data-tmp-cursor="lg" data-tmp-cursor-text="Play Video">
-                                                    <a class="video-play-button play-video" href="#">
-                                                        <span></span>
-                                                        <p class="text">
-                                                            Play Vedio
-                                                        </p>
-                                                    </a>
-                                                    <div class="video-overlay">
-                                                        <a class="video-overlay-close">×</a>
-                                                    </div>
-                                                </div>
-                                                <!-- video icon -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single swiper area start -->
+                <?php $_i++; endforeach;?>
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next" data-tmp-cursor="lg transparent fw-bold" data-tmp-cursor-text="Next"></div>
@@ -254,6 +164,7 @@
                         </div>
 
                         <p class="description" data-sal-delay="200" data-sal="slide-up" data-sal-duration="800">
+                            {{$company['construction_description']}}
                             Complex rezidențial de lux cu vedere panoramică la lac, apartamente spațioase, finisaje premium, spații verzi, locuri de relaxare și facilități moderne, proiectat pentru confort și eleganță, oferind un stil de viață exclusivist într-o locație liniștită și deosebit de atractivă.
                         </p>
                         <!-- Prograss bar Start  -->
@@ -291,7 +202,7 @@
     <!--Tpm About Area End  -->
 
     <!-- Tmp Servisec Processs Area Two Start -->
-    <div class="tpm-services-process-area tmp-section-gapBottom">
+    <div class="tpm-services-process-area tmp-section-gapBottom" id="apartments">
         <div class="container">
             <div class="row" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                 <div class="col-lg-12">
@@ -300,79 +211,38 @@
                             <img src="{{ asset('assets/images/services/section-custom-menubar.png ') }}"src="{{ asset('assets/images/services/section-custom-menubar.png ') }}" alt="Corporate_service">
                             <span class="subtitle">Randare 3D</span>
                         </div>
-                        <h2 class="title split-collab">Apartamente Randate 3D</h2>
+                        <h2 class="title split-collab">Schita apartamentelor</h2>
                     </div>
                 </div>
             </div>
 
             <div class="row g-5">
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                <?php foreach ($apartments as $index => $apartment): ?>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                     <div class="single-services construction">
                         <div class="services-inner">
                             <div class="thumbnail thumbnail-rounded border-top-left hover-animation">
                                 <a href="#">
-                                    <img src="{{ asset('assets/images/services/services-round-1.png') }}"src="{{ asset('assets/images/services/services-round-1.png') }}" alt="Business consulting services">
+                                    <img src='{{ asset("assets/images/services/services-round-" . $index+1 .".png") }}' alt="Schita apartament numarul {{$index++}}}">
                                     <div class="number-bg-round">
-                                        <span>01</span>
+                                        <span>0{{$index}}</span>
                                     </div>
                                 </a>
 
                             </div>
                             <div class="services-content services-content-style-1 text-center">
-                                <h5 class="title">Penthouse <br> Luxul la superlativ</h5>
+                                <h5 class="title">
+                                    {{$apartment['title']}}
+                                </h5>
                                 <p class="description">
-                                    Cu spații ample, ferestre panoramice, terasă privată cu vedere spectaculoasă și dotări exclusiviste, penthouse-ul redefinește eleganța și confortul pentru cei care apreciază calitatea premium.
+                                    {{$apartment['description']}}
                                 </p>
                             </div>
                         </div>
                     </div>
 
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal-delay="250" data-sal="slide-up" data-sal-duration="800">
-                    <div class="single-services construction">
-                        <div class="services-inner">
-                            <div class="thumbnail thumbnail-rounded border-top-left hover-animation">
-                                <a href="#"><img src="{{ asset('assets/images/services/services-round-2.png') }}"src="{{ asset('assets/images/services/services-round-2.png') }}" alt="Business consulting services">
-                                    <div class="number-bg-round">
-                                        <span>02</span>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div class="services-content services-content-style-1 text-center">
-                                <h5 class="title">Apartament cu 2 camere <br> Confort și funcționalitate</h5>
-                                <p class="description">
-                                    Perfect pentru cupluri sau familii mici, acest apartament oferă un living luminos, un dormitor spațios, o bucătărie modernă și un balcon cu vedere la lac, ideal pentru momente de relaxare.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal-delay="350" data-sal="slide-up" data-sal-duration="800">
-                    <div class="single-services construction">
-                        <div class="services-inner">
-                            <div class="thumbnail thumbnail-rounded border-top-left hover-animation">
-                                <a href="#"><img src="{{ asset('assets/images/services/services-round-3.png') }}"src="{{ asset('assets/images/services/services-round-3.png') }}" alt="Business consulting services">
-                                    <div class="number-bg-round">
-                                        <span>03</span>
-                                    </div>
-                                </a>
-
-                                <div class="services-content services-content-style-1 text-center">
-                                    <h5 class="title">Azpartament cu 3 camere <br> Spațiu și rafinament</h5>
-                                    <p class="description">
-                                        Potrivit pentru familii, include un living generos, două dormitoare, o bucătărie deschisă, două băi și o terasă cu priveliște panoramică. Design modern și finisaje de top.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
         <!-- Tmp Servisec Processs Area Two End -->
@@ -525,89 +395,33 @@
                     <div class="col-lg-6">
                         <div class="faq-accordion">
                             <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <div class="accordion-header" id="headingOne">
-                                        <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <?php foreach($faqs as $index => $faq):?>
+                                    <div class="accordion-item">
+                                    <div class="accordion-header" id="heading{{$getName[$index+1]}}">
+                                        <div class="accordion-button <?php if($index) echo 'collapsed' ?>" data-bs-toggle="collapse" role="button" data-bs-target="#collapse{{$getName[$index+1]}}" aria-expanded="{{(bool)$index}}" aria-controls="collapse{{$getName[$index+1]}}">
 
                                             <div class="accordion-button-left">
                                                 <i class="fa-regular fa-question"></i>
-                                                <span>Cati metri patrati are fiecare apartament?</span>
+                                                <span>{{$faq['question']}}</span>
                                             </div>
                                             <div class="accordion-button-right">
                                                 <i class="fa-sharp fa-light fa-arrow-right"></i>
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div id="collapse{{$getName[$index+1]}}" class="accordion-collapse collapse <?php if(!$index)echo 'show'?>" aria-labelledby="heading{{$getName[$index+1]}}" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Apartamentele sunt de 52, 62 si 70 metri patrati.
+                                            {{$faq['answer']}}
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <div class="accordion-header" id="headingTwo">
-                                        <div class="accordion-button collapsed" data-bs-toggle="collapse" role="button" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            <div class="accordion-button-left">
-                                                <i class="fa-regular fa-question"></i>
-                                                <span>Unde se afla complexul?</span>
-                                            </div>
-                                            <div class="accordion-button-right">
-                                                <i class="fa-sharp fa-light fa-arrow-right"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Compelxul se afla pe Soseauia Valea Rediului Nr.161 <br>
-                                            Foloseste <a style="text-decoration: none; color: var(--color-primary)" href="https://maps.app.goo.gl/zccrBKJ7gBEVKufD8">Google Maps</a> pentru a ajunge mai rapid:
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <div class="accordion-header" id="headingThree">
-                                        <div class="accordion-button collapsed" data-bs-toggle="collapse" role="button" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            <div class="accordion-button-left">
-                                                <i class="fa-regular fa-question"></i>
-                                                <span>Cat la suta este avansul?</span>
-                                            </div>
-                                            <div class="accordion-button-right">
-                                                <i class="fa-sharp fa-light fa-arrow-right"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Avansul se face la incheierea antecontractului si va fi in valoare de 10% din valoarea totala a propietatii.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <div class="accordion-header" id="headingFour">
-                                        <div class="accordion-button collapsed" data-bs-toggle="collapse" role="button" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                            <div class="accordion-button-left">
-                                                <i class="fa-regular fa-question"></i>
-                                                <span>Se poate face credit prima casa?</span>
-                                            </div>
-                                            <div class="accordion-button-right">
-                                                <i class="fa-sharp fa-light fa-arrow-right"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Sigur , se poate face orice fel de credit , in functie de ...
-                                        </div>
-                                    </div>
-                                </div>
+                                <?php endforeach;?>
                             </div>
-
                             <div class="faq-buttom">
                                 <h4 class="title">Inca aveti intrebari?
                                 </h4>
                                 <p>Contactteaza unul dintre <a href="#">Agentii Nostri</a></p>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -640,11 +454,10 @@
                                         </div>
                                         <div class="content">
                                             <span>Telefon</span>
-                                            <a class="contact-here" href="#">+40744116678</a>
+                                            <a class="contact-here" href="#">{{$company['phone']}}</a>
                                         </div>
                                     </div>
                                 </li>
-
 
                                 <li>
                                     <div class="single-contact background-transparent">
@@ -654,7 +467,7 @@
 
                                         <div class="content">
                                             <span>E-mail</span>
-                                            <a class="contact-here" href="#">info@etconstruct.com</a>
+                                            <a class="contact-here" href="#">{{$company['email']}}</a>
                                         </div>
 
                                     </div>
@@ -667,7 +480,7 @@
                                         </div>
                                         <div class="content">
                                             <span>Sediu</span>
-                                            <a class="contact-here" href="#">Soseaua Pacurari Nr.125 , Iasi</a>
+                                            <a class="contact-here" href="#">{{$company['address']}}</a>
                                         </div>
                                     </div>
                                 </li>
@@ -678,10 +491,6 @@
                                 <a class="tag-list" href="#">Facebook</a>
                                 <a class="tag-list" href="#">Instagram</a>
                                 <a class="tag-list" href="#">Google</a>
-                                {{--                            <a class="tag-list" href="#">Twitter</a>--}}
-                                {{--                            <a class="tag-list" href="#">Linkedin</a>--}}
-                                {{--                            <a class="tag-list" href="#">Skype</a>--}}
-                                {{--                            <a class="tag-list" href="#">Pinterest</a>--}}
                             </div>
 
                         </div>
@@ -741,6 +550,176 @@
         </div>
         <!-- End Contact Area  -->
 
-        <x-footer/>
+        <!-- Start Footer Area  -->
+        <footer class="footer-area footer-style-one-wrapper bg-color-footer bg_images tmp-section-gap" style="margin-top:40px;border-top-left-radius: 20px;border-top-right-radius: 20px">
+            <div class="container">
+                <div class="row d-none">
+                    <div class="col-lg-12">
+                        <div class="subscribe-area subscribe-style-1">
+                            <div class="subscribe-inner">
+                                <div class="title">Subscribe to Newsletter</div>
+                                <form action="#" class="newsletter-form-1 mt--40">
+                                    <input type="email" placeholder="Your Email" required>
+                                    <button type="submit" class="tmp-btn btn-primary">
+                                        Subscribe Now <i class="fa-sharp fa-regular fa-paper-plane"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-main footer-style-one">
+                    <div class="row g-5">
+                        <div style="width: 33%;" class="col-lg-4 col-md-6">
+                            <div class="single-footer-wrapper border-right mr--20">
+                                <div class="logo">
+                                    <a href="{{ route('index') }}">
+                                        <img src="{{ asset('assets/images/logo/logo-02.svg') }}" alt="logo">
+                                    </a>
+                                </div>
+
+                                <p class="description">
+                                    Proin Pretium Sem Libero, Nec Aliquet Augue Lobortis In. Phasellus Nibh Quam, Molestie Id Est Sit Amet, Luctus Pulvinar
+                                </p>
+
+
+                                <div class="day-time">
+                                    <div class="icon"><i class="fa-solid fa-alarm-clock"></i></div>
+                                    <div class="content">
+                                        <div class="day">Luni - Vineri:</div>
+                                        <div class="time">9:00 – 17:00</div>
+                                    </div>
+                                </div>
+
+                                <ul class="social-icons solid-social-icons rounded-social-icons">
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="width: 33%;" class="col-lg-2 col-md-6">
+                            <div class="single-footer-wrapper pl-50 pl_md--0 pl_sm--0">
+                                <h5 class="ft-title">Linkuri Ajutatoare</h5>
+                                <ul class="ft-link">
+                                    <li>
+                                        <a href="{{ route('about') }}">Despre noi</a>
+                                    </li>
+                                    <li class="d-none">
+                                        <a href="{{ route('team') }}">Meet Our Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('service') }}">Ce oferim</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('blog') }}">Randare 3D</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('contact') }}">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('faq') }}">Suport</a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 d-none">
+                            <div class="single-footer-wrapper pr--15">
+                                <h5 class="ft-title">Recent Post</h5>
+
+                                <div class="single-post">
+                                    <div class="thumbnail">
+                                        <img src="{{ asset('assets/images/footer/small-post.jpg') }}" alt="Business_Corporate">
+                                    </div>
+                                    <div class="content">
+                                        <div class="date"><i class="fa-light fa-calendar-days"></i><span>12 Feb, 2022</span></div>
+
+                                        <a href="{{ route('blog-details') }}">
+                                            <h6 class="title">Day tree hide from hath
+                                                gathered multy</h6>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="single-post">
+                                    <div class="thumbnail">
+                                        <img src="{{ asset('assets/images/footer/small-post-2.jpg') }}" alt="Business_Corporate">
+                                    </div>
+                                    <div class="content">
+                                        <div class="date"><i class="fa-light fa-calendar-days"></i><span>12 Feb, 2022</span></div>
+
+                                        <a href="{{ route('blog-details') }}">
+                                            <h6 class="title">Saving Time Achieving
+                                                Success in Business</h6>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div style="width: 33%;" class="col-lg-3 col-md-6">
+                            <div class="single-footer-wrapper">
+                                <h5 class="ft-title">Adresa Sedilui:</h5>
+                                <ul class="ft-link">
+                                    <li class="ft-location">
+                                        {{$company['address']}}
+                                    </li>
+
+                                    <li>
+                                        <div class="single-contact">
+
+                                            <div class="icon">
+                                                <i class="fa-solid fa-envelope-open-text"></i>
+                                            </div>
+
+                                            <div class="content">
+                                                <span>E-mail:</span>
+                                                <a href="mailto:info@etconstruct.ro">
+                                                    {{$company['email']}}
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="single-contact">
+                                            <div class="icon">
+                                                <i class="fa-light fa-phone"></i>
+                                            </div>
+                                            <div class="content">
+                                                <span>Phone:</span>
+                                                <a href="tel:+40744116678">{{$company['phone']}}</a>
+                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="copyright-area-one" style="border-bottom-left-radius: 20px;border-bottom-right-radius: 20px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="main-wrapper">
+                            <p>© Copyright 2024. Ne rezervam drepturile de autor <a href="#">{{$company['construction_name']}}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Area  -->
+
 
 @endsection

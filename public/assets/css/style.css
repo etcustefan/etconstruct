@@ -13273,15 +13273,6 @@ nav ul li.has-dropdown .submenu li::after {
 .tmp-banner-swiper-one-area.construction-2 .shape-image-banner-one .three {
   display: none;
 }
-.tmp-banner-swiper-one-area.construction-2 .bg_image-1 {
-  background-image: url(../images/banner/construction-04.jpg);
-}
-.tmp-banner-swiper-one-area.construction-2 .bg_image-2 {
-  background-image: url(../images/banner/construction-05.jpg);
-}
-.tmp-banner-swiper-one-area.construction-2 .bg_image-3 {
-  background-image: url(../images/banner/construction-06.jpg);
-}
 .tmp-banner-swiper-one-area.construction-2:hover .swiper-button-next,
 .tmp-banner-swiper-one-area.construction-2:hover .swiper-button-prev {
   opacity: 1;
@@ -17049,15 +17040,6 @@ body.service-details {
 .tmp-banner-swiper-one-area.construction-2 .shape-image-banner-one .three {
   display: none;
 }
-.tmp-banner-swiper-one-area.construction-2 .bg_image-1 {
-  background-image: url(../images/banner/construction-04.jpg);
-}
-.tmp-banner-swiper-one-area.construction-2 .bg_image-2 {
-  background-image: url(../images/banner/construction-05.jpg);
-}
-.tmp-banner-swiper-one-area.construction-2 .bg_image-3 {
-  background-image: url(../images/banner/construction-06.jpg);
-}
 .tmp-banner-swiper-one-area.construction-2:hover .swiper-button-next,
 .tmp-banner-swiper-one-area.construction-2:hover .swiper-button-prev {
   opacity: 1;
@@ -17238,18 +17220,6 @@ body.service-details {
   font-size: 16px;
   line-height: 28px;
   color: var(--color-body);
-}
-
-.bg_image-1 {
-  background-image: url(../images/banner/01.jpg);
-}
-
-.bg_image-2 {
-  background-image: url(../images/banner/04.jpg);
-}
-
-.bg_image-3 {
-  background-image: url(../images/banner/05.jpg);
 }
 
 .bg_image {

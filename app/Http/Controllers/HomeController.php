@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Apartment;
+use App\Models\Company;
+use App\Models\Faq;
+use App\Models\MainGallery;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -43,7 +47,37 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('OnePage/onepage_seven');
+        $mainGallery = MainGallery::all()->toArray();
+        $apartments  = Apartment::all()->toArray();
+        $company     = Company::first()->toArray();
+        $faqs        = Faq::all()->toArray();
+        $getName     = $this->getNameNumber();
+        return view('OnePage/onepage_seven')
+            ->with(
+                [
+                    'mainGallery' => $mainGallery,
+                    'apartments'  => $apartments,
+                    'company'     => $company,
+                    'faqs'        => $faqs,
+                    'getName'     => $getName
+                ],
+            );
+    }
+
+    protected function getNameNumber(): array
+    {
+        return [
+            1  => 'One',
+            2  => 'Two',
+            3  => 'Three',
+            4  => 'Four',
+            5  => 'Five',
+            6  => 'Six',
+            7  => 'Seven',
+            8  => 'Eight',
+            9  => 'Nine',
+            10 => 'Ten'
+        ];
     }
 
     public function service_details()
